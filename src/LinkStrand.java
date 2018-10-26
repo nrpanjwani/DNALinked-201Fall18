@@ -33,7 +33,7 @@ public class LinkStrand implements IDnaStrand{
 		// Initializes new LinkStrand object as Node and assigns to myFirst
 		myFirst = new Node(source);
 		myLast = myFirst;
-		mySize += myFirst.info.length();
+		mySize = myFirst.info.length();
 		myIndex = 0;
 		myLocalIndex = 0;
 		myCurrent = myFirst;
