@@ -65,6 +65,7 @@ public class LinkStrand implements IDnaStrand{
 		// with nucleotides in reverse order
 		Node node = myFirst;
 		LinkStrand revStrand = new LinkStrand();
+		
 		while(node != null) {
 			StringBuilder copy = new StringBuilder(node.info);
 			Node myNext = null; // Initialize myNext as null
@@ -72,6 +73,7 @@ public class LinkStrand implements IDnaStrand{
 				myNext = revStrand.myFirst;
 			}
 			revStrand.myFirst = new Node(copy.reverse().toString());
+			revStrand.mySize += revStrand.myFirst.info.length();
 			revStrand.myFirst.next = myNext; // Default next field is null, uses stored value
 			node = node.next;
 		}
