@@ -36,6 +36,7 @@ public class LinkStrand implements IDnaStrand{
 		mySize = myFirst.info.length();
 		myIndex = 0;
 		myLocalIndex = 0;
+		myAppends = 0;
 		myCurrent = myFirst;
 	}
 
